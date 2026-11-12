@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://fjs6mla8sclg" path="res://sprites/world_tileset.png" id="1_15coe"]
 [ext_resource type="Texture2D" uid="uid://0j2oybwo1h5t" path="res://icon.svg" id="2_32nbw"]
-[ext_resource type="Script" uid="uid://b53u2gq0jrn70" path="res://sprite_2d_rotate.gd" id="3_a5vsl"]
+[ext_resource type="Script" uid="uid://dnpq4q3g5bkqo" path="res://scripts/rotate_sprite_2d.gd" id="3_a5vsl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_32nbw"]
 texture = ExtResource("1_15coe")
@@ -171,7 +171,9 @@ format = 2
 layer_0/tile_data = PackedInt32Array(131068, 0, 1, 131069, 0, 1, 131070, 0, 1, 131071, 0, 1, 65536, 0, 1, 131067, 0, 1, 65531, 0, 1, -5, 0, 1, -65541, 0, 1, -131077, 0, 1, -131076, 0, 1, -131075, 0, 1, -131074, 0, 1, -131073, 0, 1, -196608, 0, 1, -131072, 0, 1, -65536, 0, 1, 0, 0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1592518860]
-position = Vector2(-260.44724, -107.92702)
+position = Vector2(-227.21661, -52.063564)
 scale = Vector2(1.3300688, 1.3312551)
 texture = ExtResource("2_32nbw")
 script = ExtResource("3_a5vsl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=747924264]

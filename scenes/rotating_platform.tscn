@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://rdhwv60b12oo"]
+
+[ext_resource type="Texture2D" uid="uid://hbglx0u8sqgq" path="res://sprites/platforms.png" id="1_rt4pv"]
+[ext_resource type="Script" uid="uid://b5oxpef41lqt6" path="res://scripts/rotating_platform.gd" id="1_sf3qt"]
+
+[sub_resource type="GDScript" id="GDScript_dt5r4"]
+script/source = "extends Sprite2D
+
+
+func _process(delta:float):
+	
+	var direction = 0
+	
+	if Input.is_action_pressed(\"turn_left\"):
+		direction = -1
+		
+	elif Input.is_action_pressed(\"turn_right\"):
+		direction = 1
+	
+	rotation += PI * delta * direction
+	
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(32, 8)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=2047393518]
+script = ExtResource("1_sf3qt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310235962]
+texture = ExtResource("1_rt4pv")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 8)
+script = SubResource("GDScript_dt5r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133967074]
+shape = SubResource("RectangleShape2D_g4v7s")

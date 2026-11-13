@@ -7,6 +7,8 @@
 script/source = "extends Sprite2D
 
 
+
+
 func _process(delta:float):
 	
 	var direction = 0
@@ -25,6 +27,7 @@ func _process(delta:float):
 size = Vector2(32, 8)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" unique_id=2047393518]
+disable_mode = 2
 script = ExtResource("1_sf3qt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310235962]
@@ -35,3 +38,5 @@ script = SubResource("GDScript_dt5r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133967074]
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=890332409]

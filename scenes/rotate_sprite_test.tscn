@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://2wqetvfnoqf"]
+
+[ext_resource type="Script" uid="uid://dwiuk87m5y1a2" path="res://scripts/static_body_2d.gd" id="1_6c8j7"]
+[ext_resource type="Texture2D" uid="uid://hbglx0u8sqgq" path="res://sprites/platforms.png" id="2_6c8j7"]
+
+[sub_resource type="GDScript" id="GDScript_53nwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(28, 7)
+
+[node name="Node2D" type="Node2D" unique_id=544051115]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1068024985]
+script = ExtResource("1_6c8j7")
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D" unique_id=57317102]
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1146090966]
+rotation = 6.2831855
+texture = ExtResource("2_6c8j7")
+region_enabled = true
+region_rect = Rect2(16.84404, 0, 30.31337, 9.646202)
+script = SubResource("GDScript_53nwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=622195990]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1556295048]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_g4v7s")

@@ -1,18 +1,32 @@
 [gd_scene format=3 uid="uid://cus8ji0dgpygu"]
 
 [ext_resource type="PackedScene" uid="uid://dwamywhpnb5g1" path="res://scenes/coin_rigid.tscn" id="1_32nbw"]
-[ext_resource type="Script" uid="uid://dkaoa0oksynai" path="res://bla.gd" id="1_a5vsl"]
-[ext_resource type="PackedScene" uid="uid://rdhwv60b12oo" path="res://scenes/rotating_platform.tscn" id="2_a5vsl"]
+[ext_resource type="PackedScene" uid="uid://2wqetvfnoqf" path="res://scenes/rotate_sprite_test.tscn" id="2_a5vsl"]
+
+[sub_resource type="GDScript" id="GDScript_32nbw"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="AnaSahne" type="Node2D" unique_id=1474961524]
 position = Vector2(-38, -41)
 rotation = 0.0041232957
-script = ExtResource("1_a5vsl")
+script = SubResource("GDScript_32nbw")
+
+[node name="Node2D" parent="." unique_id=544051115 instance=ExtResource("2_a5vsl")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=747924264]
 zoom = Vector2(5, 5)
 
 [node name="coin_rigid" parent="." unique_id=1698587988 instance=ExtResource("1_32nbw")]
+position = Vector2(0.60415626, -96.00331)
 mass = 0.001
-
-[node name="AnimatableBody2D" parent="." unique_id=2047393518 instance=ExtResource("2_a5vsl")]

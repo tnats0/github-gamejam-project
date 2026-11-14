@@ -26,7 +26,3 @@ script = SubResource("GDScript_53nwc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=622195990]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1556295048]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_g4v7s")

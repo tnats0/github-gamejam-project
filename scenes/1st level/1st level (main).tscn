@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://crtfpte581lda"]
+
+[ext_resource type="PackedScene" uid="uid://csk4i322v1ouv" path="res://scenes/1st level/box.tscn" id="1_2p3ac"]
+[ext_resource type="PackedScene" uid="uid://c8s11s4beje5d" path="res://scenes/1st level/road.tscn" id="2_7gp3v"]
+
+[node name="1StLevel(main)" type="Node2D" unique_id=1071778571]
+
+[node name="Box" parent="." unique_id=2092011838 instance=ExtResource("1_2p3ac")]
+position = Vector2(6.8561554, 1.4176598)
+
+[node name="Road" parent="." unique_id=465863643 instance=ExtResource("2_7gp3v")]
+position = Vector2(281, -7)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=994034663]
+position = Vector2(215, 10)

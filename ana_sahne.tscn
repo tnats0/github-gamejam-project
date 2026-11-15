@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cus8ji0dgpygu"]
+[gd_scene format=3 uid="uid://bxf4qajs88rtw"]
 
 [ext_resource type="PackedScene" uid="uid://dwamywhpnb5g1" path="res://scenes/coin_rigid.tscn" id="1_32nbw"]
 [ext_resource type="PackedScene" uid="uid://cjp0xdgiq8fhx" path="res://scenes/test_level.tscn" id="2_32nbw"]

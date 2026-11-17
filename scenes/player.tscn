@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://ck8gifpjum7vx"]
 
-[ext_resource type="Texture2D" uid="uid://bwhvkfcmiqeyl" path="res://sprites/knight.png" id="1_6l3be"]
-[ext_resource type="Script" uid="uid://cdfrwvqcffv34" path="res://Scripts/player.gd" id="1_y8w33"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
-radius = 4.0
+[ext_resource type="Texture2D" uid="uid://d2iqymvspq07e" path="res://sprites/knight.png" id="1_6l3be"]
+[ext_resource type="Script" uid="uid://dq0r8v0xwawjt" path="res://Scripts/player.gd" id="1_y8w33"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r6jsd"]
 atlas = ExtResource("1_6l3be")
@@ -121,16 +118,6 @@ animations = [{
 "name": &"Idle",
 "speed": 10.0
 }, {
-"frames": [],
-"loop": 1,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": 1,
-"name": &"Landing",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y8w33")
@@ -197,18 +184,20 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_57qmd"]
+radius = 4.1231055
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=116594617]
 position = Vector2(23, -26)
 script = ExtResource("1_y8w33")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1382335925]
-position = Vector2(0, 7)
-shape = SubResource("CircleShape2D_yf5fn")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=569423629]
-position = Vector2(0, 7)
 zoom = Vector2(5, 5)
 
 [node name="Hareket" type="AnimatedSprite2D" parent="." unique_id=1785837275]
 sprite_frames = SubResource("SpriteFrames_d0u6y")
-animation = &"Landing"
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=773399500]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_57qmd")

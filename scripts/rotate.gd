@@ -2,8 +2,9 @@ extends Area2D
 
 var is_ready = true
 var current_angle = 0.0
-const ANGLE = 90.0
 var direction = 0
+
+const ANGLE = 90.0
 
 
 
@@ -28,8 +29,6 @@ func _physics_process(_delta:float) -> void:
 	is_ready = false
 	var from_angle = current_angle
 	current_angle += ANGLE * direction
-	
-	print("Previous Angle: ",from_angle," Current Angle: ",current_angle," Global Angle: ",global_rotation_degrees)
 
 	var tween = create_tween()
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)

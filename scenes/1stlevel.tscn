@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://s4jtnqxkwq30" path="res://scripts/rotate.gd" id="1_djjgp"]
 [ext_resource type="Texture2D" uid="uid://fjs6mla8sclg" path="res://sprites/world_tileset.png" id="1_mcj4a"]
 [ext_resource type="Texture2D" uid="uid://b4322fkq3c8sf" path="res://sprites/coin.png" id="3_661ox"]
+[ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="4_0mo3a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djjgp"]
 texture = ExtResource("1_mcj4a")
@@ -397,6 +398,8 @@ region_rect = Rect2(0, 0, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=622300138]
 z_index = 1
 shape = SubResource("CircleShape2D_661ox")
+
+[node name="CharacterBody2D" parent="." unique_id=116594617 instance=ExtResource("4_0mo3a")]
 
 [connection signal="input_event" from="Box" to="Box" method="_on_input_event"]
 [connection signal="input_event" from="Box2" to="Box2" method="_on_input_event"]

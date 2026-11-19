@@ -10,20 +10,23 @@
 [node name="Box" parent="." unique_id=2139643607 instance=ExtResource("1_f3jgg")]
 
 [node name="Box2" parent="." unique_id=1924836073 instance=ExtResource("1_f3jgg")]
-position = Vector2(544, 0)
-rotation = 0.0
-
-[node name="Box3" parent="." unique_id=22516066 instance=ExtResource("1_f3jgg")]
-position = Vector2(544, 544)
+position = Vector2(576, 0)
 rotation = 1.5707964
 
+[node name="Box3" parent="." unique_id=22516066 instance=ExtResource("1_f3jgg")]
+position = Vector2(576, 576)
+rotation = -3.1415927
+
 [node name="Box4" parent="." unique_id=1071916292 instance=ExtResource("1_f3jgg")]
-position = Vector2(1088, 544)
+position = Vector2(1152, 576)
 rotation = 0.0
 
 [node name="Road" parent="." unique_id=585420509 instance=ExtResource("2_f3jgg")]
+position = Vector2(288, 0)
 
 [node name="CharacterBody2D" parent="." unique_id=116594617 instance=ExtResource("4_0mo3a")]
+z_index = 1
+position = Vector2(24, 16)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=245082909]
 stream = ExtResource("5_f3jgg")
@@ -31,8 +34,12 @@ autoplay = true
 parameters/looping = true
 
 [node name="Road2" parent="." unique_id=1184244078 instance=ExtResource("2_f3jgg")]
-position = Vector2(544, 0)
+position = Vector2(576, 288)
 rotation = 1.5707964
 
 [node name="Road3" parent="." unique_id=1226989182 instance=ExtResource("2_f3jgg")]
-position = Vector2(544, 544)
+position = Vector2(864, 576)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=39871279]
+position = Vector2(560, 280)
+zoom = Vector2(0.75, 0.75)

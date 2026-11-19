@@ -10,10 +10,13 @@ const ANGLE = 90.0
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.is_action_pressed("left_click"):
 		
-		direction = signf(Input.get_axis("left_click","right_click"))
+		direction = 1
 	
+	else:
+		
+		direction = 0
 	
 func _ready() -> void:
 	current_angle = snappedf(global_rotation_degrees, ANGLE)

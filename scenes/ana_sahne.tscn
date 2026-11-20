@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cus8ji0dgpygu"]
+[gd_scene format=4 uid="uid://g5hckqtby6dc"]
 
 [ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="1_7vkc4"]
 [ext_resource type="Texture2D" uid="uid://fjs6mla8sclg" path="res://sprites/world_tileset.png" id="2_lb42l"]

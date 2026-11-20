@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://s4jtnqxkwq30" path="res://scripts/rotate.gd" id="1_djjgp"]
 [ext_resource type="Texture2D" uid="uid://fjs6mla8sclg" path="res://sprites/world_tileset.png" id="1_mcj4a"]
-[ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="4_0mo3a"]
+[ext_resource type="PackedScene" uid="uid://g5hckqtby6dc" path="res://scenes/ana_sahne.tscn" id="4_0mo3a"]
 [ext_resource type="AudioStream" uid="uid://cfu6hhm5ihnyp" path="res://music/banger2.mp3" id="5_f3jgg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djjgp"]

@@ -3,7 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
-@onready var hareket: AnimatedSprite2D = $Hareket
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 
 
 func _physics_process(delta: float) -> void:
@@ -17,9 +18,9 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("Left", "Right")
 	if direction != 0:
 		velocity.x = direction * SPEED
-		hareket.flip_h = direction < 0
-		hareket.play("Run")
+		animated_sprite_2d.flip_h = direction < 0
+		animated_sprite_2d.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		hareket.play("Idle")
+		animated_sprite_2d.play("default")
 	move_and_slide()

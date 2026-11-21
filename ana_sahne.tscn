@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cus8ji0dgpygu"]
+
+[ext_resource type="PackedScene" uid="uid://nf7vnx2ws7s1" path="res://scenes/1stlevel.tscn" id="2_32nbw"]
+
+[sub_resource type="GDScript" id="GDScript_32nbw"]
+
+[node name="AnaSahne" type="Node2D" unique_id=1474961524]
+position = Vector2(-38, -41)
+rotation = 0.0041232957
+script = SubResource("GDScript_32nbw")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=747924264]
+position = Vector2(42.00377, 0.82681364)
+zoom = Vector2(5, 5)
+
+[node name="Node2D" parent="." unique_id=351919080 instance=ExtResource("2_32nbw")]
+position = Vector2(67.80692, 33.82167)

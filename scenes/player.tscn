@@ -198,9 +198,11 @@ sprite_frames = SubResource("SpriteFrames_d0u6y")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=773399500]
+z_index = 1
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_57qmd")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1457387124]
 z_index = 1
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
+limit_bottom = 408

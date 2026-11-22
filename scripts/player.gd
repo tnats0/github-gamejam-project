@@ -4,9 +4,19 @@ extends CharacterBody2D
 const SPEED = 130.0
 const JUMP_VELOCITY = -400.0
 
+@export var health = 100
 var doubleJumpReady = false
 
 @onready var hareket: AnimatedSprite2D = $Hareket
+@onready var cam: Camera2D = $Camera2D
+
+func _ready():
+	
+	cam.limit_bottom = $"../WorldBoundary/worldboundarycollision".global_position.y - 300
+	
+	print(cam.limit_bottom)
+	
+
 
 func disableCamera():
 
@@ -19,7 +29,7 @@ func disableCamera():
 		
 		$"../Camera2D".enabled = false
 		$Camera2D.enabled = true
-	
+
 
 func jump():
 	
@@ -45,7 +55,7 @@ func _physics_process(delta: float) -> void:
 	if direction != 0:
 		velocity.x = direction * SPEED
 		hareket.flip_h = direction < 0
-		hareket.play("Run")
+		hareket.play("Walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		hareket.play("Idle")

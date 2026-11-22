@@ -46,3 +46,7 @@ func _physics_process(_delta:float) -> void:
 
 func _set_angle(angle: float) -> void:
 	global_rotation_degrees = angle
+
+
+func _on_world_boundary_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

@@ -119,9 +119,8 @@ animations = [{
 radius = 11.0
 height = 48.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=116594617]
-position = Vector2(23, -26)
-script = ExtResource("1_y8w33")
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1619210679]
+script = ExtResource("1_qhqgy")
 
 [node name="Hareket" type="AnimatedSprite2D" parent="." unique_id=1785837275]
 position = Vector2(-23, -8.999996)

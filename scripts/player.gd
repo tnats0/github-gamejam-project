@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		hareket.play("Walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		hareket.play("Idle")
+		animated_sprite_2d.play("default")
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:

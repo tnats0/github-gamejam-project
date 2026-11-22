@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://nf7vnx2ws7s1"]
 
-[ext_resource type="Script" uid="uid://s4jtnqxkwq30" path="res://scripts/rotate.gd" id="1_djjgp"]
-[ext_resource type="Texture2D" uid="uid://fjs6mla8sclg" path="res://sprites/world_tileset.png" id="1_mcj4a"]
-[ext_resource type="PackedScene" uid="uid://g5hckqtby6dc" path="res://scenes/ana_sahne.tscn" id="4_0mo3a"]
-[ext_resource type="AudioStream" uid="uid://cfu6hhm5ihnyp" path="res://music/banger2.mp3" id="5_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://cj76ev5yfrg8a" path="res://scenes/room.tscn" id="1_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://baf65flxsp57q" path="res://scenes/road.tscn" id="2_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://w3mxx2yanw2d" path="res://scenes/player.tscn" id="4_0mo3a"]
+[ext_resource type="Script" uid="uid://d8pl0nh6msdo" path="res://scripts/world_boundary.gd" id="5_bbxwa"]
+[ext_resource type="AudioStream" uid="uid://c6ausja0t0kua" path="res://music/banger1.mp3" id="5_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://gn7bacwlgs0m" path="res://scenes/spawn_room.tscn" id="6_bbxwa"]
+[ext_resource type="Texture2D" uid="uid://n5o3np0hpgu" path="res://1 Tiles/industrial_tile_set.png" id="6_mppax"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_djjgp"]
-texture = ExtResource("1_mcj4a")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4osa"]
+texture = ExtResource("6_mppax")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -19,6 +22,24 @@ texture = ExtResource("1_mcj4a")
 9:0/0 = 0
 10:0/0 = 0
 11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+17:0/0 = 0
+18:0/0 = 0
+19:0/0 = 0
+20:0/0 = 0
+21:0/0 = 0
+22:0/0 = 0
+23:0/0 = 0
+24:0/0 = 0
+25:0/0 = 0
+26:0/0 = 0
+27:0/0 = 0
+28:0/0 = 0
+29:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -31,6 +52,24 @@ texture = ExtResource("1_mcj4a")
 9:1/0 = 0
 10:1/0 = 0
 11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+18:1/0 = 0
+19:1/0 = 0
+20:1/0 = 0
+21:1/0 = 0
+22:1/0 = 0
+23:1/0 = 0
+24:1/0 = 0
+25:1/0 = 0
+26:1/0 = 0
+27:1/0 = 0
+28:1/0 = 0
+29:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -43,14 +82,50 @@ texture = ExtResource("1_mcj4a")
 9:2/0 = 0
 10:2/0 = 0
 11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+19:2/0 = 0
+20:2/0 = 0
+21:2/0 = 0
+22:2/0 = 0
+23:2/0 = 0
+24:2/0 = 0
+25:2/0 = 0
+26:2/0 = 0
+27:2/0 = 0
+28:2/0 = 0
+29:2/0 = 0
 0:3/0 = 0
 1:3/0 = 0
 2:3/0 = 0
-5:3/0 = 0
+3:3/0 = 0
 6:3/0 = 0
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+19:3/0 = 0
+20:3/0 = 0
+21:3/0 = 0
+24:3/0 = 0
+25:3/0 = 0
+26:3/0 = 0
+27:3/0 = 0
+28:3/0 = 0
+29:3/0 = 0
 0:4/0 = 0
 1:4/0 = 0
 2:4/0 = 0
@@ -61,6 +136,26 @@ texture = ExtResource("1_mcj4a")
 7:4/0 = 0
 8:4/0 = 0
 9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+19:4/0 = 0
+20:4/0 = 0
+21:4/0 = 0
+22:4/0 = 0
+23:4/0 = 0
+24:4/0 = 0
+25:4/0 = 0
+26:4/0 = 0
+27:4/0 = 0
+28:4/0 = 0
+29:4/0 = 0
 0:5/0 = 0
 1:5/0 = 0
 2:5/0 = 0
@@ -70,6 +165,28 @@ texture = ExtResource("1_mcj4a")
 6:5/0 = 0
 7:5/0 = 0
 8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+19:5/0 = 0
+20:5/0 = 0
+21:5/0 = 0
+22:5/0 = 0
+23:5/0 = 0
+24:5/0 = 0
+25:5/0 = 0
+26:5/0 = 0
+27:5/0 = 0
+28:5/0 = 0
+29:5/0 = 0
+0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
@@ -78,13 +195,57 @@ texture = ExtResource("1_mcj4a")
 6:6/0 = 0
 7:6/0 = 0
 8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+27:6/0 = 0
+28:6/0 = 0
+29:6/0 = 0
 0:7/0 = 0
 1:7/0 = 0
+2:7/0 = 0
 3:7/0 = 0
+4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
 8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+26:7/0 = 0
+27:7/0 = 0
+28:7/0 = 0
+29:7/0 = 0
 0:8/0 = 0
 1:8/0 = 0
 2:8/0 = 0
@@ -94,6 +255,27 @@ texture = ExtResource("1_mcj4a")
 6:8/0 = 0
 7:8/0 = 0
 8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
 0:9/0 = 0
 1:9/0 = 0
 2:9/0 = 0
@@ -102,366 +284,92 @@ texture = ExtResource("1_mcj4a")
 5:9/0 = 0
 6:9/0 = 0
 7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+24:9/0 = 0
+25:9/0 = 0
 0:10/0 = 0
 1:10/0 = 0
 2:10/0 = 0
 3:10/0 = 0
 4:10/0 = 0
+5:10/0 = 0
 6:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+28:10/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_g4v7s"]
-sources/0 = SubResource("TileSetAtlasSource_djjgp")
+[sub_resource type="TileSet" id="TileSet_3k4dd"]
+sources/0 = SubResource("TileSetAtlasSource_a4osa")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_djjgp"]
-size = Vector2(208, 32.000008)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
-size = Vector2(208, 32.000008)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_661ox"]
-size = Vector2(160, 32.000008)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
-size = Vector2(224, 224)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_661ox"]
-texture = ExtResource("1_mcj4a")
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-3:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-6:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_yf5fn"]
-sources/0 = SubResource("TileSetAtlasSource_661ox")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
-size = Vector2(319.99997, 32)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
 
 [node name="1Stlevel" type="Node2D" unique_id=550880420]
 
-[node name="Box" type="Area2D" parent="." unique_id=588616940]
-rotation = -1.5707964
-script = ExtResource("1_djjgp")
+[node name="Box" parent="." unique_id=2139643607 instance=ExtResource("1_f3jgg")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Box" unique_id=304996874]
-
-[node name="TileMap" type="TileMap" parent="Box/StaticBody2D" unique_id=1287626876]
-tile_set = SubResource("TileSet_g4v7s")
-format = 2
-layer_0/tile_data = PackedInt32Array(-8, 393216, 1, -65544, 393216, 1, -131080, 393216, 1, -196616, 393216, 1, -9, 393216, 1, -65545, 393216, 1, -131081, 393216, 1, 65527, 393216, 1, 65528, 393216, 1, 131063, 393216, 1, 131064, 393216, 1, 196599, 393216, 1, 196600, 393216, 1, 262136, 393216, 1, 393210, 393216, 1, 393211, 393216, 1, 458746, 393216, 1, 458747, 393216, 1, 393212, 393216, 1, 458748, 393216, 1, 393213, 393216, 1, 458749, 393216, 1, 393214, 393216, 1, 458750, 393216, 1, 393215, 393216, 1, 458751, 393216, 1, 327680, 393216, 1, 393216, 393216, 1, 327681, 393216, 1, 393217, 393216, 1, -327686, 393216, 1, -327685, 393216, 1, -327684, 393216, 1, -327683, 393216, 1, -327682, 393216, 1, -327681, 393216, 1, -393216, 393216, 1, -393222, 393216, 1, -393221, 393216, 1, -393220, 393216, 1, -393219, 393216, 1, -393218, 393216, 1, -393217, 393216, 1, -458752, 393216, 1, -458751, 393216, 1, -458750, 393216, 1, -458749, 393216, 1, -458748, 393216, 1, -393215, 393216, 1, -393214, 393216, 1, -393213, 393216, 1, -393212, 393216, 1, 327682, 393216, 1, 327683, 393216, 1, 327684, 393216, 1, 393218, 393216, 1, 393219, 393216, 1, 393220, 393216, 1, 327685, 393216, 2, 393221, 393216, 2, 327686, 393216, 2, 393222, 393216, 2, -458747, 393216, 2, -458746, 393216, 2, -393210, 393216, 2, 262137, 393216, 1, 327673, 393216, 1, 327674, 393216, 1, -196615, 393216, 1, -262151, 393216, 1, -262150, 393216, 1, -7, 393216, 1, 65529, 393216, 1, -327676, 393216, 1, -262140, 393216, 1, -327677, 393216, 1, 196612, 393216, 1, 262148, 393216, 1, 262147, 393216, 1, -327675, 393216, 2, 196613, 393216, 1, 262149, 393216, 2, -393211, 393216, 2, 327672, 393216, 1, 393209, 393216, 1, -262152, 393216, 1, -327687, 393216, 1, -196617, 393216, 1, 262135, 393216, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box/StaticBody2D" unique_id=1105895889]
-position = Vector2(8.000004, 96)
-shape = SubResource("RectangleShape2D_djjgp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Box/StaticBody2D" unique_id=71574597]
-position = Vector2(7.9999957, -96)
-shape = SubResource("RectangleShape2D_d0u6y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Box/StaticBody2D" unique_id=1495780287]
-position = Vector2(-112, 4.8956754e-06)
+[node name="Box2" parent="." unique_id=1924836073 instance=ExtResource("1_f3jgg")]
+position = Vector2(576, 0)
 rotation = 1.5707964
-shape = SubResource("RectangleShape2D_661ox")
 
-[node name="Input" type="CollisionShape2D" parent="Box" unique_id=1822251125]
-z_index = 20
-position = Vector2(-32, 0)
-shape = SubResource("RectangleShape2D_yf5fn")
+[node name="Box3" parent="." unique_id=22516066 instance=ExtResource("1_f3jgg")]
+position = Vector2(576, 576)
+rotation = -3.1415927
 
-[node name="Road" type="TileMap" parent="." unique_id=1407171768]
-tile_set = SubResource("TileSet_yf5fn")
-format = 2
-layer_0/tile_data = PackedInt32Array(327687, 131072, 1, 393223, 131072, 1, 327688, 131072, 1, 393224, 131072, 1, -458745, 131072, 1, -393209, 131072, 1, -458744, 131072, 1, -393208, 131072, 1, 327689, 0, 1, 327690, 0, 1, 327691, 0, 1, 327692, 0, 1, 327693, 0, 1, 327694, 0, 1, 327695, 0, 1, 327696, 0, 1, 327697, 0, 1, 327698, 0, 1, 327699, 0, 1, 327700, 0, 1, 327701, 0, 1, 327702, 0, 1, 327703, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 1, 393229, 0, 1, 393230, 0, 1, 393231, 0, 1, 393232, 0, 1, 393233, 0, 1, 393234, 0, 1, 393235, 0, 1, 393236, 0, 1, 393237, 0, 1, 393238, 0, 1, 393239, 0, 1, -458743, 0, 1, -458742, 0, 1, -458741, 0, 1, -458740, 0, 1, -458739, 0, 1, -458738, 0, 1, -458737, 0, 1, -458736, 0, 1, -458735, 0, 1, -458734, 0, 1, -393198, 0, 1, -393197, 0, 1, -393196, 0, 1, -393195, 0, 1, -393194, 0, 1, -458730, 0, 1, -458729, 0, 1, -458733, 0, 1, -458732, 0, 1, -458731, 0, 1, -393207, 0, 1, -393206, 0, 1, -393205, 0, 1, -393204, 0, 1, -393203, 0, 1, -393202, 0, 1, -393201, 0, 1, -393200, 0, 1, -393199, 0, 1, -393193, 0, 1, 327704, 0, 1, 393240, 0, 1, 393241, 131072, 1, 327705, 131072, 1, -458728, 0, 1, -393192, 0, 1, -458727, 131072, 1, -458726, 131072, 1, -393190, 131072, 1, -393191, 131072, 1, 327706, 131072, 1, 393242, 131072, 1)
+[node name="Box4" parent="." unique_id=1071916292 instance=ExtResource("1_f3jgg")]
+position = Vector2(1152, 576)
+rotation = 0.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Road" unique_id=500292814]
+[node name="Road" parent="." unique_id=585420509 instance=ExtResource("2_f3jgg")]
+position = Vector2(288, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Road/StaticBody2D" unique_id=163779993]
-position = Vector2(272, 96)
-shape = SubResource("RectangleShape2D_57qmd")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Road/StaticBody2D" unique_id=819548714]
-position = Vector2(272, -96)
-shape = SubResource("RectangleShape2D_57qmd")
-
-[node name="Road2" type="TileMap" parent="." unique_id=1760513530]
-position = Vector2(544, 0)
-rotation = 1.5707964
-tile_set = SubResource("TileSet_yf5fn")
-format = 2
-layer_0/tile_data = PackedInt32Array(327687, 131072, 1, 393223, 131072, 1, 327688, 131072, 1, 393224, 131072, 1, -458745, 131072, 1, -393209, 131072, 1, -458744, 131072, 1, -393208, 131072, 1, 327689, 0, 1, 327690, 0, 1, 327691, 0, 1, 327692, 0, 1, 327693, 0, 1, 327694, 0, 1, 327695, 0, 1, 327696, 0, 1, 327697, 0, 1, 327698, 0, 1, 327699, 0, 1, 327700, 0, 1, 327701, 0, 1, 327702, 0, 1, 327703, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 1, 393229, 0, 1, 393230, 0, 1, 393231, 0, 1, 393232, 0, 1, 393233, 0, 1, 393234, 0, 1, 393235, 0, 1, 393236, 0, 1, 393237, 0, 1, 393238, 0, 1, 393239, 0, 1, -458743, 0, 1, -458742, 0, 1, -458741, 0, 1, -458740, 0, 1, -458739, 0, 1, -458738, 0, 1, -458737, 0, 1, -458736, 0, 1, -458735, 0, 1, -458734, 0, 1, -393198, 0, 1, -393197, 0, 1, -393196, 0, 1, -393195, 0, 1, -393194, 0, 1, -458730, 0, 1, -458729, 0, 1, -458733, 0, 1, -458732, 0, 1, -458731, 0, 1, -393207, 0, 1, -393206, 0, 1, -393205, 0, 1, -393204, 0, 1, -393203, 0, 1, -393202, 0, 1, -393201, 0, 1, -393200, 0, 1, -393199, 0, 1, -393193, 0, 1, 327704, 0, 1, 393240, 0, 1, 393241, 131072, 1, 327705, 131072, 1, -458728, 0, 1, -393192, 0, 1, -458727, 131072, 1, -458726, 131072, 1, -393190, 131072, 1, -393191, 131072, 1, 327706, 131072, 1, 393242, 131072, 1)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Road2" unique_id=1934495467]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Road2/StaticBody2D" unique_id=1310072227]
-position = Vector2(272, 96)
-shape = SubResource("RectangleShape2D_57qmd")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Road2/StaticBody2D" unique_id=799765666]
-position = Vector2(272, -96)
-shape = SubResource("RectangleShape2D_57qmd")
-
-[node name="Box2" type="Area2D" parent="." unique_id=1717416699]
-position = Vector2(544, 0)
-rotation = 1.5707964
-script = ExtResource("1_djjgp")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Box2" unique_id=855614336]
-
-[node name="TileMap" type="TileMap" parent="Box2/StaticBody2D" unique_id=1450907389]
-tile_set = SubResource("TileSet_g4v7s")
-format = 2
-layer_0/tile_data = PackedInt32Array(-8, 393216, 1, -65544, 393216, 1, -131080, 393216, 1, -196616, 393216, 1, -9, 393216, 1, -65545, 393216, 1, -131081, 393216, 1, 65527, 393216, 1, 65528, 393216, 1, 131063, 393216, 1, 131064, 393216, 1, 196599, 393216, 1, 196600, 393216, 1, 262136, 393216, 1, 393210, 393216, 1, 393211, 393216, 1, 458746, 393216, 1, 458747, 393216, 1, 393212, 393216, 1, 458748, 393216, 1, 393213, 393216, 1, 458749, 393216, 1, 393214, 393216, 1, 458750, 393216, 1, 393215, 393216, 1, 458751, 393216, 1, 327680, 393216, 1, 393216, 393216, 1, 327681, 393216, 1, 393217, 393216, 1, -327686, 393216, 1, -327685, 393216, 1, -327684, 393216, 1, -327683, 393216, 1, -327682, 393216, 1, -327681, 393216, 1, -393216, 393216, 1, -393222, 393216, 1, -393221, 393216, 1, -393220, 393216, 1, -393219, 393216, 1, -393218, 393216, 1, -393217, 393216, 1, -458752, 393216, 1, -458751, 393216, 1, -458750, 393216, 1, -458749, 393216, 1, -458748, 393216, 1, -393215, 393216, 1, -393214, 393216, 1, -393213, 393216, 1, -393212, 393216, 1, 327682, 393216, 1, 327683, 393216, 1, 327684, 393216, 1, 393218, 393216, 1, 393219, 393216, 1, 393220, 393216, 1, 327685, 393216, 2, 393221, 393216, 2, 327686, 393216, 2, 393222, 393216, 2, -458747, 393216, 2, -458746, 393216, 2, -393210, 393216, 2, 262137, 393216, 1, 327673, 393216, 1, 327674, 393216, 1, -196615, 393216, 1, -262151, 393216, 1, -262150, 393216, 1, -7, 393216, 1, 65529, 393216, 1, -327676, 393216, 1, -262140, 393216, 1, -327677, 393216, 1, 196612, 393216, 1, 262148, 393216, 1, 262147, 393216, 1, -327675, 393216, 2, 196613, 393216, 1, 262149, 393216, 2, -393211, 393216, 2, 327672, 393216, 1, 393209, 393216, 1, -262152, 393216, 1, -327687, 393216, 1, -196617, 393216, 1, 262135, 393216, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2/StaticBody2D" unique_id=1174948822]
-position = Vector2(8.000004, 96)
-shape = SubResource("RectangleShape2D_djjgp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Box2/StaticBody2D" unique_id=1412314177]
-position = Vector2(7.9999957, -96)
-shape = SubResource("RectangleShape2D_d0u6y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Box2/StaticBody2D" unique_id=1662602492]
-position = Vector2(-112, 4.8956754e-06)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_661ox")
-
-[node name="Input" type="CollisionShape2D" parent="Box2" unique_id=551344238]
-z_index = 20
-position = Vector2(-32, 0)
-shape = SubResource("RectangleShape2D_yf5fn")
+[node name="Road4" parent="." unique_id=1141152021 instance=ExtResource("2_f3jgg")]
+position = Vector2(-288, 0)
 
 [node name="CharacterBody2D" parent="." unique_id=116594617 instance=ExtResource("4_0mo3a")]
+z_index = 1
+position = Vector2(0, 832)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=245082909]
 stream = ExtResource("5_f3jgg")
 autoplay = true
 parameters/looping = true
 
-[node name="Box3" type="Area2D" parent="." unique_id=398904068]
-position = Vector2(544, 544)
-rotation = -1.5707964
-script = ExtResource("1_djjgp")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Box3" unique_id=457475314]
-
-[node name="TileMap" type="TileMap" parent="Box3/StaticBody2D" unique_id=1520373429]
-tile_set = SubResource("TileSet_g4v7s")
-format = 2
-layer_0/tile_data = PackedInt32Array(-8, 393216, 1, -65544, 393216, 1, -131080, 393216, 1, -196616, 393216, 1, -9, 393216, 1, -65545, 393216, 1, -131081, 393216, 1, 65527, 393216, 1, 65528, 393216, 1, 131063, 393216, 1, 131064, 393216, 1, 196599, 393216, 1, 196600, 393216, 1, 262136, 393216, 1, 393210, 393216, 1, 393211, 393216, 1, 458746, 393216, 1, 458747, 393216, 1, 393212, 393216, 1, 458748, 393216, 1, 393213, 393216, 1, 458749, 393216, 1, 393214, 393216, 1, 458750, 393216, 1, 393215, 393216, 1, 458751, 393216, 1, 327680, 393216, 1, 393216, 393216, 1, 327681, 393216, 1, 393217, 393216, 1, -327686, 393216, 1, -327685, 393216, 1, -327684, 393216, 1, -327683, 393216, 1, -327682, 393216, 1, -327681, 393216, 1, -393216, 393216, 1, -393222, 393216, 1, -393221, 393216, 1, -393220, 393216, 1, -393219, 393216, 1, -393218, 393216, 1, -393217, 393216, 1, -458752, 393216, 1, -458751, 393216, 1, -458750, 393216, 1, -458749, 393216, 1, -458748, 393216, 1, -393215, 393216, 1, -393214, 393216, 1, -393213, 393216, 1, -393212, 393216, 1, 327682, 393216, 1, 327683, 393216, 1, 327684, 393216, 1, 393218, 393216, 1, 393219, 393216, 1, 393220, 393216, 1, 327685, 393216, 2, 393221, 393216, 2, 327686, 393216, 2, 393222, 393216, 2, -458747, 393216, 2, -458746, 393216, 2, -393210, 393216, 2, 262137, 393216, 1, 327673, 393216, 1, 327674, 393216, 1, -196615, 393216, 1, -262151, 393216, 1, -262150, 393216, 1, -7, 393216, 1, 65529, 393216, 1, -327676, 393216, 1, -262140, 393216, 1, -327677, 393216, 1, 196612, 393216, 1, 262148, 393216, 1, 262147, 393216, 1, -327675, 393216, 2, 196613, 393216, 1, 262149, 393216, 2, -393211, 393216, 2, 327672, 393216, 1, 393209, 393216, 1, -262152, 393216, 1, -327687, 393216, 1, -196617, 393216, 1, 262135, 393216, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box3/StaticBody2D" unique_id=373112919]
-position = Vector2(8.000004, 96)
-shape = SubResource("RectangleShape2D_djjgp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Box3/StaticBody2D" unique_id=1777593611]
-position = Vector2(7.9999957, -96)
-shape = SubResource("RectangleShape2D_d0u6y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Box3/StaticBody2D" unique_id=609919179]
-position = Vector2(-112, 4.8956754e-06)
+[node name="Road2" parent="." unique_id=1184244078 instance=ExtResource("2_f3jgg")]
+position = Vector2(576, 288)
 rotation = 1.5707964
-shape = SubResource("RectangleShape2D_661ox")
 
-[node name="Input" type="CollisionShape2D" parent="Box3" unique_id=1263282815]
-z_index = 20
-position = Vector2(-32, 0)
-shape = SubResource("RectangleShape2D_yf5fn")
+[node name="Road3" parent="." unique_id=1226989182 instance=ExtResource("2_f3jgg")]
+position = Vector2(864, 576)
 
-[node name="Road3" type="TileMap" parent="." unique_id=611975970]
-position = Vector2(544, 544)
-tile_set = SubResource("TileSet_yf5fn")
-format = 2
-layer_0/tile_data = PackedInt32Array(327687, 131072, 1, 393223, 131072, 1, 327688, 131072, 1, 393224, 131072, 1, -458745, 131072, 1, -393209, 131072, 1, -458744, 131072, 1, -393208, 131072, 1, 327689, 0, 1, 327690, 0, 1, 327691, 0, 1, 327692, 0, 1, 327693, 0, 1, 327694, 0, 1, 327695, 0, 1, 327696, 0, 1, 327697, 0, 1, 327698, 0, 1, 327699, 0, 1, 327700, 0, 1, 327701, 0, 1, 327702, 0, 1, 327703, 0, 1, 393225, 0, 1, 393226, 0, 1, 393227, 0, 1, 393228, 0, 1, 393229, 0, 1, 393230, 0, 1, 393231, 0, 1, 393232, 0, 1, 393233, 0, 1, 393234, 0, 1, 393235, 0, 1, 393236, 0, 1, 393237, 0, 1, 393238, 0, 1, 393239, 0, 1, -458743, 0, 1, -458742, 0, 1, -458741, 0, 1, -458740, 0, 1, -458739, 0, 1, -458738, 0, 1, -458737, 0, 1, -458736, 0, 1, -458735, 0, 1, -458734, 0, 1, -393198, 0, 1, -393197, 0, 1, -393196, 0, 1, -393195, 0, 1, -393194, 0, 1, -458730, 0, 1, -458729, 0, 1, -458733, 0, 1, -458732, 0, 1, -458731, 0, 1, -393207, 0, 1, -393206, 0, 1, -393205, 0, 1, -393204, 0, 1, -393203, 0, 1, -393202, 0, 1, -393201, 0, 1, -393200, 0, 1, -393199, 0, 1, -393193, 0, 1, 327704, 0, 1, 393240, 0, 1, 393241, 131072, 1, 327705, 131072, 1, -458728, 0, 1, -393192, 0, 1, -458727, 131072, 1, -458726, 131072, 1, -393190, 131072, 1, -393191, 131072, 1, 327706, 131072, 1, 393242, 131072, 1)
+[node name="SpawnRoom" parent="." unique_id=1160099324 instance=ExtResource("6_bbxwa")]
+position = Vector2(-576, 0)
+tile_set = SubResource("TileSet_3k4dd")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Road3" unique_id=1198092080]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=39871279]
+position = Vector2(560, 280)
+zoom = Vector2(0.75, 0.75)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Road3/StaticBody2D" unique_id=825420676]
-position = Vector2(272, 96)
-shape = SubResource("RectangleShape2D_57qmd")
+[node name="WorldBoundary" type="Area2D" parent="." unique_id=1090183196]
+script = ExtResource("5_bbxwa")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Road3/StaticBody2D" unique_id=137452185]
-position = Vector2(272, -96)
-shape = SubResource("RectangleShape2D_57qmd")
+[node name="worldboundarycollision" type="CollisionShape2D" parent="WorldBoundary" unique_id=2005925784]
+position = Vector2(0, 1104)
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
 
-[node name="Box4" type="Area2D" parent="." unique_id=524084209]
-position = Vector2(1072, 544)
-script = ExtResource("1_djjgp")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Box4" unique_id=1110073939]
-
-[node name="TileMap" type="TileMap" parent="Box4/StaticBody2D" unique_id=1421287325]
-tile_set = SubResource("TileSet_g4v7s")
-format = 2
-layer_0/tile_data = PackedInt32Array(-8, 393216, 1, -65544, 393216, 1, -131080, 393216, 1, -196616, 393216, 1, -9, 393216, 1, -65545, 393216, 1, -131081, 393216, 1, 65527, 393216, 1, 65528, 393216, 1, 131063, 393216, 1, 131064, 393216, 1, 196599, 393216, 1, 196600, 393216, 1, 262136, 393216, 1, 393210, 393216, 1, 393211, 393216, 1, 458746, 393216, 1, 458747, 393216, 1, 393212, 393216, 1, 458748, 393216, 1, 393213, 393216, 1, 458749, 393216, 1, 393214, 393216, 1, 458750, 393216, 1, 393215, 393216, 1, 458751, 393216, 1, 327680, 393216, 1, 393216, 393216, 1, 327681, 393216, 1, 393217, 393216, 1, -327686, 393216, 1, -327685, 393216, 1, -327684, 393216, 1, -327683, 393216, 1, -327682, 393216, 1, -327681, 393216, 1, -393216, 393216, 1, -393222, 393216, 1, -393221, 393216, 1, -393220, 393216, 1, -393219, 393216, 1, -393218, 393216, 1, -393217, 393216, 1, -458752, 393216, 1, -458751, 393216, 1, -458750, 393216, 1, -458749, 393216, 1, -458748, 393216, 1, -393215, 393216, 1, -393214, 393216, 1, -393213, 393216, 1, -393212, 393216, 1, 327682, 393216, 1, 327683, 393216, 1, 327684, 393216, 1, 393218, 393216, 1, 393219, 393216, 1, 393220, 393216, 1, 327685, 393216, 2, 393221, 393216, 2, 327686, 393216, 2, 393222, 393216, 2, -458747, 393216, 2, -458746, 393216, 2, -393210, 393216, 2, 262137, 393216, 1, 327673, 393216, 1, 327674, 393216, 1, -196615, 393216, 1, -262151, 393216, 1, -262150, 393216, 1, -7, 393216, 1, 65529, 393216, 1, -327676, 393216, 1, -262140, 393216, 1, -327677, 393216, 1, 196612, 393216, 1, 262148, 393216, 1, 262147, 393216, 1, -327675, 393216, 2, 196613, 393216, 1, 262149, 393216, 2, -393211, 393216, 2, 327672, 393216, 1, 393209, 393216, 1, -262152, 393216, 1, -327687, 393216, 1, -196617, 393216, 1, 262135, 393216, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Box4/StaticBody2D" unique_id=933967924]
-position = Vector2(8.000004, 96)
-shape = SubResource("RectangleShape2D_djjgp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Box4/StaticBody2D" unique_id=82205613]
-position = Vector2(7.9999957, -96)
-shape = SubResource("RectangleShape2D_d0u6y")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Box4/StaticBody2D" unique_id=492041585]
-position = Vector2(-112, 4.8956754e-06)
-rotation = 1.5707964
-shape = SubResource("RectangleShape2D_661ox")
-
-[node name="Input" type="CollisionShape2D" parent="Box4" unique_id=127425762]
-z_index = 20
-position = Vector2(-32, 0)
-shape = SubResource("RectangleShape2D_yf5fn")
-
-[connection signal="input_event" from="Box" to="Box" method="_on_input_event"]
-[connection signal="input_event" from="Box2" to="Box2" method="_on_input_event"]
-[connection signal="input_event" from="Box3" to="Box3" method="_on_input_event"]
-[connection signal="input_event" from="Box4" to="Box4" method="_on_input_event"]
+[connection signal="body_entered" from="WorldBoundary" to="WorldBoundary" method="_on_body_entered"]

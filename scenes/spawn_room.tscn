@@ -625,10 +625,16 @@ sources/0 = SubResource("TileSetAtlasSource_a4osa")
 size = Vector2(224, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbxwa"]
-size = Vector2(240.00293, 32)
+size = Vector2(235.00288, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w3vf"]
+size = Vector2(400.00488, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cpai"]
+size = Vector2(397.50482, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mppax"]
-size = Vector2(240.00293, 32)
+size = Vector2(230.00284, 32)
 
 [node name="SpawnRoom" type="TileMap" unique_id=1160099324]
 position = Vector2(8, 0)
@@ -659,14 +665,28 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1777626219]
 z_as_relative = false
-position = Vector2(-64, -96)
+position = Vector2(-65, -96)
 rotation = -3.1415925
 scale = Vector2(0.3999951, -1)
 shape = SubResource("RectangleShape2D_bbxwa")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=495630393]
+z_as_relative = false
+position = Vector2(-33.5, -192)
+rotation = 1.5707964
+scale = Vector2(0.3999951, -1)
+shape = SubResource("RectangleShape2D_8w3vf")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1337248841]
+z_as_relative = false
+position = Vector2(33, -192.5)
+rotation = 1.5707964
+scale = Vector2(0.3999951, -1)
+shape = SubResource("RectangleShape2D_4cpai")
+
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1705690687]
 z_as_relative = false
-position = Vector2(64, -96)
+position = Vector2(66, -96)
 rotation = -3.1415925
 scale = Vector2(0.3999951, -1)
 shape = SubResource("RectangleShape2D_mppax")

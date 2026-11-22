@@ -55,7 +55,7 @@ func _physics_process(delta: float) -> void:
 	if direction != 0:
 		velocity.x = direction * SPEED
 		hareket.flip_h = direction < 0
-		hareket.play("Run")
+		hareket.play("Walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		hareket.play("Idle")

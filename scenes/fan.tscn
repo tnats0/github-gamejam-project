@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://b5p3klhrqft25" path="res://1 Tiles/IndustrialTile_27.png" id="1_vent"]
+[ext_resource type="Script" path="res://scripts/fan.gd" id="2_fan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fan"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_airflow"]
+size = Vector2(256, 64)
+
+[node name="Fan" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vent")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_fan")
+
+[node name="Airflow" type="Area2D" parent="."]
+position = Vector2(144, 0)
+script = ExtResource("2_fan")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Airflow"]
+shape = SubResource("RectangleShape2D_airflow")
+
+[connection signal="body_entered" from="Airflow" to="Airflow" method="_on_body_entered"]
+[connection signal="body_exited" from="Airflow" to="Airflow" method="_on_body_exited"]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cksmdkte6odo2"]
+
+[ext_resource type="Texture2D" uid="uid://b5p3klhrqft25" path="res://1 Tiles/IndustrialTile_27.png" id="1_rof1k"]
+[ext_resource type="Script" uid="uid://dguupl4y8gv8t" path="res://scripts/jump.gd" id="2_8iihu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(32, 4)
+
+[node name="Jumppad" type="Node2D" unique_id=1661704531]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1183151510]
+texture = ExtResource("1_rof1k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=742789455]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=460086621]
+script = ExtResource("2_8iihu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=203154618]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

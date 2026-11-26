@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://rto31yorun11"]
+
+[ext_resource type="Texture2D" uid="uid://b5p3klhrqft25" path="res://1 Tiles/IndustrialTile_27.png" id="1_tile"]
+[ext_resource type="Script" path="res://scripts/sticky_surface.gd" id="2_sticky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_surface"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trigger"]
+size = Vector2(40, 40)
+
+[node name="StickySurface" type="Node2D" unique_id=1162967672]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=758160291]
+texture = ExtResource("1_tile")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1218050362]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1221118370]
+shape = SubResource("RectangleShape2D_surface")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1623728146]
+script = ExtResource("2_sticky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1816483978]
+shape = SubResource("RectangleShape2D_trigger")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

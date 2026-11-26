@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d042167eewq1w"]
+
+[ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="1_bl13t"]
+[ext_resource type="PackedScene" uid="uid://cksmdkte6odo2" path="res://scenes/jumppad.tscn" id="2_iyx0m"]
+[ext_resource type="PackedScene" uid="uid://rto31yorun11" path="res://scenes/sticky_surface.tscn" id="3_iyx0m"]
+[ext_resource type="PackedScene" path="res://scenes/fan.tscn" id="4_74lek"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_g4v7s"]
+distance = -8.0
+
+[node name="Test" type="Node2D" unique_id=273522777]
+
+[node name="CharacterBody2D" parent="." unique_id=116594617 instance=ExtResource("1_bl13t")]
+position = Vector2(-32, -32)
+
+[node name="Jumppad" parent="." unique_id=1661704531 instance=ExtResource("2_iyx0m")]
+position = Vector2(56, 8)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1410929101]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1234107283]
+shape = SubResource("WorldBoundaryShape2D_g4v7s")
+
+[node name="StickySurface" parent="." unique_id=1162967672 instance=ExtResource("3_iyx0m")]
+position = Vector2(-104, -56)
+rotation = 1.5707964
+
+[node name="Fan" parent="." unique_id=1229283903 instance=ExtResource("4_74lek")]
+position = Vector2(128, -24)
+rotation = -1.5707964

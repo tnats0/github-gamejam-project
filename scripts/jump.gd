@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		print(body.velocity.y)
 		
-		body.velocity.y = -800.0
+		body.velocity.y = -1200.0
 		
 		print(body.velocity.y)
 		

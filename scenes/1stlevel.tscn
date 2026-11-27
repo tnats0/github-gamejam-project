@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://nf7vnx2ws7s1"]
 
-[ext_resource type="PackedScene" uid="uid://cj76ev5yfrg8a" path="res://scenes/room.tscn" id="1_f3jgg"]
-[ext_resource type="PackedScene" uid="uid://baf65flxsp57q" path="res://scenes/road.tscn" id="2_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://cj76ev5yfrg8a" path="res://scenes/Level_Parts/room.tscn" id="1_f3jgg"]
+[ext_resource type="PackedScene" uid="uid://baf65flxsp57q" path="res://scenes/Level_Parts/road.tscn" id="2_f3jgg"]
 [ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="4_0mo3a"]
 [ext_resource type="Script" uid="uid://d8pl0nh6msdo" path="res://scripts/world_boundary.gd" id="5_bbxwa"]
 [ext_resource type="AudioStream" uid="uid://c6ausja0t0kua" path="res://music/banger1.mp3" id="5_f3jgg"]
-[ext_resource type="PackedScene" uid="uid://by3p1d8f6o856" path="res://scenes/spawn_room.tscn" id="6_bbxwa"]
+[ext_resource type="PackedScene" uid="uid://gn7bacwlgs0m" path="res://scenes/Level_Parts/spawn_room.tscn" id="6_bbxwa"]
 [ext_resource type="Texture2D" uid="uid://n5o3np0hpgu" path="res://1 Tiles/industrial_tile_set.png" id="6_mppax"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4osa"]

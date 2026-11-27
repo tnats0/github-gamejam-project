@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://gn7bacwlgs0m" path="res://scenes/Level_Parts/spawn_room.tscn" id="5_xf5h4"]
 [ext_resource type="PackedScene" uid="uid://3vopfmr3up2g" path="res://scenes/Level_Parts/static_room.tscn" id="6_room"]
 [ext_resource type="PackedScene" uid="uid://c0u3jmdb5p5p" path="res://scenes/Level_Parts/exit_room.tscn" id="6_xf5h4"]
+[ext_resource type="PackedScene" path="res://scenes/event_button.tscn" id="8_cwnst"]
 
 [node name="2Ndlevel" type="Node2D" unique_id=1471561898]
 
@@ -43,3 +44,10 @@ position = Vector2(1208, 16)
 position = Vector2(584, -184)
 scale = Vector2(-122.32754, -17.138744)
 zoom = Vector2(0.5, 0.5)
+
+[node name="Door" type="Node2D" parent="." unique_id=711895077]
+
+[node name="EventButton" parent="." unique_id=1276349813 instance=ExtResource("8_cwnst")]
+position = Vector2(440, -536.00006)
+rotation = 1.5684644
+scale = Vector2(0.5083788, 0.3477658)

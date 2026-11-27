@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://befxm8yj6b5lq"]
+
+[ext_resource type="PackedScene" uid="uid://cj76ev5yfrg8a" path="res://scenes/Level_Parts/room.tscn" id="1_l0tpv"]
+[ext_resource type="PackedScene" uid="uid://baf65flxsp57q" path="res://scenes/Level_Parts/road.tscn" id="2_dmhv3"]
+[ext_resource type="PackedScene" uid="uid://cksmdkte6odo2" path="res://scenes/Level_Parts/jumppad.tscn" id="3_dmhv3"]
+[ext_resource type="PackedScene" uid="uid://ck8gifpjum7vx" path="res://scenes/player.tscn" id="4_enwq7"]
+[ext_resource type="PackedScene" uid="uid://gn7bacwlgs0m" path="res://scenes/Level_Parts/spawn_room.tscn" id="5_xf5h4"]
+[ext_resource type="PackedScene" uid="uid://3vopfmr3up2g" path="res://scenes/Level_Parts/static_room.tscn" id="6_room"]
+[ext_resource type="PackedScene" uid="uid://c0u3jmdb5p5p" path="res://scenes/Level_Parts/exit_room.tscn" id="6_xf5h4"]
+
+[node name="2Ndlevel" type="Node2D" unique_id=1471561898]
+
+[node name="Road" parent="." unique_id=585420509 instance=ExtResource("2_dmhv3")]
+position = Vector2(288, 0)
+
+[node name="Road2" parent="." unique_id=572623595 instance=ExtResource("2_dmhv3")]
+position = Vector2(864, 0)
+
+[node name="Road3" parent="." unique_id=128097007 instance=ExtResource("2_dmhv3")]
+position = Vector2(576, -288)
+rotation = 1.5707964
+
+[node name="CharacterBody2D" parent="." unique_id=116594617 instance=ExtResource("4_enwq7")]
+z_index = 1
+position = Vector2(24, 16)
+
+[node name="SpawnRoom" parent="." unique_id=1160099324 instance=ExtResource("5_xf5h4")]
+position = Vector2(0, 0)
+
+[node name="Box" parent="." unique_id=2139643607 instance=ExtResource("1_l0tpv")]
+position = Vector2(576, 0)
+
+[node name="Jumppad" parent="Box" unique_id=1661704531 instance=ExtResource("3_dmhv3")]
+position = Vector2(-96, -4.196293e-06)
+rotation = 1.5707964
+
+[node name="exit_room" parent="." unique_id=1598401650 instance=ExtResource("6_xf5h4")]
+position = Vector2(1208, 16)
+
+[node name="StaticRoom" parent="." unique_id=325739560 instance=ExtResource("6_room")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=540884061]
+position = Vector2(584, -184)
+scale = Vector2(-122.32754, -17.138744)
+zoom = Vector2(0.5, 0.5)
